@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveTheDate", "Day1\SaveTheDate\SaveTheDate.csproj", "{9069B8AF-ECED-47DB-9CF9-BF7528CDB942}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrarian", "Day1\Contrarian\Contrarian.csproj", "{53E4BBA0-1CD4-4CBA-BDCC-8A093E9086CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9069B8AF-ECED-47DB-9CF9-BF7528CDB942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9069B8AF-ECED-47DB-9CF9-BF7528CDB942}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9069B8AF-ECED-47DB-9CF9-BF7528CDB942}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9069B8AF-ECED-47DB-9CF9-BF7528CDB942}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E4BBA0-1CD4-4CBA-BDCC-8A093E9086CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E4BBA0-1CD4-4CBA-BDCC-8A093E9086CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E4BBA0-1CD4-4CBA-BDCC-8A093E9086CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E4BBA0-1CD4-4CBA-BDCC-8A093E9086CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
