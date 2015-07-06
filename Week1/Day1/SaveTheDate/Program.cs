@@ -25,12 +25,13 @@ namespace SaveTheDate
         {
             string userDate = "";
             
-            Console.Write("Enter a date in MM/DD/YY format:");
+            Console.Write("Enter a date in MM/DD/YYYY format: ");
             userDate = Console.ReadLine();
 
             DateTime formattedDate = ToDate(userDate);
 
             Console.WriteLine("The date you entered was: " + formattedDate.ToString("D"));
+            Console.ReadLine();
         }
     }
 }
