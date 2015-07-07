@@ -6,15 +6,62 @@ using System.Threading.Tasks;
 
 namespace Classwork
 {
+    //Part 2
+    class Product
+    {
+        public string Name { get; set; }
+
+        private decimal _price;
+        public decimal Price
+        {
+            get { return _price; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("value", "The price can't be less than zero.");
+                }
+
+                _price = value;
+            }
+        }
+
+        public decimal CalculateTax()
+        {
+            return this.Price * .08m;
+        }
+    }
+    
     class Program
     {
         static void Main(string[] args)
         {
-            string productName = "laptop";
-            decimal price = 344.55m;
-            string message = String.Format("The {0} costs {1:c}.", productName, price);
+            ////Part 1
+            //string productName = "laptop";
+            //decimal price = 344.55m;
+            //string message = String.Format("The {0} costs {1:c}.", productName, price);
 
-            Console.WriteLine(message);
+            //Console.WriteLine(message);
+            //Console.ReadLine();
+
+
+            //Part 2
+            Product product1 = new Product()
+            {
+                Name = "Milk",
+                Price = 2.33m
+            };
+
+            Product product2 = new Product()
+            {
+                Name = "Eggs",
+                Price = 1.33m
+            };
+
+            Console.WriteLine(string.Format("{0}: {1:c} + {2:c} tax", product1.Name, product1.Price, product1.CalculateTax()));
+            Console.WriteLine(string.Format("{0}: {1:c} + {2:c} tax", product2.Name, product2.Price, product2.CalculateTax()));
+
+            //pause
             Console.ReadLine();
         }
     }
