@@ -26,9 +26,13 @@ namespace Classwork
             }
         }
 
-        public decimal CalculateTax(decimal taxRate=0)
+        public decimal CalculateTax(decimal taxRate = .08m)
         {
             return this.Price * taxRate;
+        }
+        public decimal CalculateTax(decimal taxRate, decimal discount)
+        {
+            return (this.Price - (this.Price * discount)) * taxRate;
         }
     }
     
@@ -58,8 +62,8 @@ namespace Classwork
                 Price = 1.33m
             };
 
-            Console.WriteLine(string.Format("{0}: {1:c} + {2:c} tax", product1.Name, product1.Price, product1.CalculateTax(.08m)));
-            Console.WriteLine(string.Format("{0}: {1:c} + {2:c} tax", product2.Name, product2.Price, product2.CalculateTax()));
+            Console.WriteLine(string.Format("{0}: {1:c} + {2:c} tax", product1.Name, product1.Price, product1.CalculateTax()));
+            Console.WriteLine(string.Format("{0}: {1:c} + {2:c} tax", product2.Name, product2.Price, product2.CalculateTax(.08m,.2m)));
 
             //pause
             Console.ReadLine();
