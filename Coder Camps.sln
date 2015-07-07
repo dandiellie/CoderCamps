@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseSentenceWords", "Week1\Day2\ReverseSentenceWords\ReverseSentenceWords.csproj", "{2AF8AF36-6FAB-407B-9521-54094CB8AB12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNewsWithArray", "Week1\Day2\RandomNewsWithArray\RandomNewsWithArray.csproj", "{F01CDDE7-BCD1-4DD5-9F29-7272705E7C28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2AF8AF36-6FAB-407B-9521-54094CB8AB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AF8AF36-6FAB-407B-9521-54094CB8AB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AF8AF36-6FAB-407B-9521-54094CB8AB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01CDDE7-BCD1-4DD5-9F29-7272705E7C28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01CDDE7-BCD1-4DD5-9F29-7272705E7C28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01CDDE7-BCD1-4DD5-9F29-7272705E7C28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01CDDE7-BCD1-4DD5-9F29-7272705E7C28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
