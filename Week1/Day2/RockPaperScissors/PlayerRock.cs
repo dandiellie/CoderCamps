@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Program
+    class PlayerRock
     {
-        static void Main(string[] args)
-        {
 
-        }
     }
 }
