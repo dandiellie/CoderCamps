@@ -18,13 +18,21 @@ namespace ProductWithConstructor
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int UnitsInStock { get; set; }
-        public string Description { get; set; }
+        public string Description { get; private set; }
 
         public Product(string name, decimal price, int unitsInStock)
         {
             Name = name;
             Price = price;
             UnitsInStock = unitsInStock;
+        }
+
+        public Product(string name, decimal price, int unitsInStock, string description)
+        {
+            Name = name;
+            Price = price;
+            UnitsInStock = unitsInStock;
+            Description = description;
         }
     }
 }
