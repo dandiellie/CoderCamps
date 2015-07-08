@@ -24,14 +24,14 @@ namespace ComplexClass
                 CheckingAccount = new Account
                 {
                     IdNum = 789321456,
-                    Type = 'C',
+                    Type = AccountType.Checking,
                     Balance = 100m,
                     IsOpen = true
                 },
                 SavingsAccount = new Account
                 {
                     IdNum = 789321654,
-                    Type = 'S',
+                    Type = AccountType.Savings,
                     Balance = 0m,
                     IsOpen = false
                 }
@@ -47,6 +47,11 @@ namespace ComplexClass
         }
     }
 
+    enum AccountType
+    {
+        Checking, Savings
+    }
+
     class Address
     {
         public string Street { get; set; }
@@ -57,7 +62,7 @@ namespace ComplexClass
     class Account
     {
         public int IdNum { get; set; }
-        public char Type { get; set; }
+        public AccountType Type;
         public decimal Balance { get; set; }
         public bool IsOpen { get; set; }
     }
