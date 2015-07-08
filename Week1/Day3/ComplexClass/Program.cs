@@ -9,7 +9,7 @@ namespace ComplexClass
     class Program
     {
         static void Main(string[] args)
-        {
+        {         
             Customer alice = new Customer
             {
                 FirstName = "Alice",

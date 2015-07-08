@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexClass", "Day3\ComplexClass\ComplexClass.csproj", "{39F15857-9C69-4CA8-B92C-DDDE48EDCC7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classwork", "Day3\Classwork\Classwork.csproj", "{8A19F171-FDAF-4F7C-B577-DF431C267592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayExtensions", "Day3\ArrayExtensions\ArrayExtensions.csproj", "{69B0AB76-C2C2-45B4-894A-F6DF65783EAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{39F15857-9C69-4CA8-B92C-DDDE48EDCC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F15857-9C69-4CA8-B92C-DDDE48EDCC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F15857-9C69-4CA8-B92C-DDDE48EDCC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A19F171-FDAF-4F7C-B577-DF431C267592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A19F171-FDAF-4F7C-B577-DF431C267592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A19F171-FDAF-4F7C-B577-DF431C267592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A19F171-FDAF-4F7C-B577-DF431C267592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B0AB76-C2C2-45B4-894A-F6DF65783EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B0AB76-C2C2-45B4-894A-F6DF65783EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B0AB76-C2C2-45B4-894A-F6DF65783EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B0AB76-C2C2-45B4-894A-F6DF65783EAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
