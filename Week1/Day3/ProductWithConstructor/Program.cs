@@ -20,14 +20,7 @@ namespace ProductWithConstructor
         public int UnitsInStock { get; set; }
         public string Description { get; private set; }
 
-        public Product(string name, decimal price, int unitsInStock)
-        {
-            Name = name;
-            Price = price;
-            UnitsInStock = unitsInStock;
-        }
-
-        public Product(string name, decimal price, int unitsInStock, string description)
+        public Product(string name, decimal price, int unitsInStock, string description=null)
         {
             Name = name;
             Price = price;
