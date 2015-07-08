@@ -24,10 +24,22 @@ namespace AnimalInterface
         }
     }
 
-    interface IAnimal
+    abstract class Animal
     {
-        string Name { get; set; }
-        string MakeSound();
+        public string Name { get; set; }
+        public string Sound { get; set; }
+
+        public string MakeSound()
+        {
+            if (this is IBird)
+            {
+                return this.Sound + " Flap, flap, flap.";
+            }
+            else
+            {
+                return this.Sound;
+            }
+        }
     }
 
     interface IBird
@@ -35,75 +47,36 @@ namespace AnimalInterface
 
     }
 
-    class Bear : IAnimal
+    class Bear : Animal
     {
-        public string Name { get; set; }
-
         public Bear()
         {
-            this.Name = "Bear";
-        }
-
-        public string MakeSound()
-        {
-            if (this is IBird)
-            {
-                return "Roar! Flap, flap, flap.";
-            }
-            else
-            {
-                return "Roar!";
-            }
+            Name = "Bear";
+            Sound = "Roar!";
         }
     }
 
-    class Chicken : IAnimal, IBird
+    class Chicken : Animal, IBird
     {
-        public string Name { get; set; }
-
         public Chicken()
         {
-            this.Name = "Chicken";
-        }
-
-        public string MakeSound()
-        {
-            if (this is IBird)
-            {
-                return "Bwaawk! Flap, flap, flap.";
-            }
-            else
-            {
-                return "Bwaawk!";
-            }
+            Name = "Chicken";
+            Sound = "Bwaawk!";
         }
     }
 
-    class Eagle : IAnimal, IBird
+    class Eagle : Animal, IBird
     {
-        public string Name { get; set; }
-
         public Eagle()
         {
-            this.Name = "Eagle";
-        }
-
-        public string MakeSound()
-        {
-            if (this is IBird)
-            {
-                return "Scree! Flap, flap, flap.";
-            }
-            else
-            {
-                return "Scree!";
-            }
+            Name = "Eagle";
+            Sound = "Scree!";
         }
     }
 
     class AnimalUtility
     {
-        public static void DoSomething(IAnimal a)
+        public static void DoSomething(Animal a)
         {
             Console.WriteLine(string.Format("A {0} makes a sound like {1}", a.Name, a.MakeSound()));
         }
