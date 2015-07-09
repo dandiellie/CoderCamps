@@ -15,13 +15,10 @@ namespace Classwork
         //    value = "Goodbye!";
         //}
 
-        //static void Increment(int n)
-        //{
-        //    int m = n;
-        //    n++;
-
-        //    Debug.Assert(n == m+1, "The incremented integer should be: " + m);
-        //}
+        static void Increment(ref int n)
+        {
+            n++;
+        }
 
         static void Main(string[] args)
         {
@@ -29,23 +26,26 @@ namespace Classwork
             //DoSomething(message1);
             //Console.WriteLine("The value of message1 is " + message1);
 
-            //Increment(5);
+            int num = 5;
+            Increment(ref num);
 
-            Random myRand = new Random();
-            ArrayList headlines = new ArrayList();
-            headlines.Add("Martians Attack!!");
-            headlines.Add("Astros Win World Series!!");
-            headlines.Add("Coder Camps Amazes Students!!");
-            int length = 10; //sets the number of times the testing loop will run
+            Debug.Assert(num == 6, "The incremented integer should be: " + 6);
 
-            int j = 0;
-            for (int i = 0; i < length; i++)
-		    {
-                j = myRand.Next(3);
-                Console.WriteLine(headlines[j]);
-		    }
+            //Random myRand = new Random();
+            //ArrayList headlines = new ArrayList();
+            //headlines.Add("Martians Attack!!");
+            //headlines.Add("Astros Win World Series!!");
+            //headlines.Add("Coder Camps Amazes Students!!");
+            //int length = 10; //sets the number of times the testing loop will run
 
-            Console.ReadLine(); //pause
+            //int j = 0;
+            //for (int i = 0; i < length; i++)
+            //{
+            //    j = myRand.Next(3);
+            //    Console.WriteLine(headlines[j]);
+            //}
+
+            //Console.ReadLine(); //pause
         }
 
     }

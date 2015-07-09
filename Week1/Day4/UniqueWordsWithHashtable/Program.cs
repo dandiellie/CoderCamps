@@ -37,7 +37,7 @@ namespace UniqueWordsWithHashtable
                 else
                 {
                     uniqueWordList.Add(word, word);
-                    Console.Write(word + " ");            //included for testing
+                    //Console.Write(word + " ");            //included for testing
                 }                
             }
 
