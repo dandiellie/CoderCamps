@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classwork", "Week1\Day2\Classwork\Classwork.csproj", "{931AB3A0-D133-44D9-B0CC-DC4867F68DC0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Week1\Day2\Inheritance\Inheritance.csproj", "{8DB2D5C8-DD63-4DA9-B245-57EE163DA1F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classwork", "Week1\Day4\Classwork\Classwork.csproj", "{3A500173-F275-4535-9B12-920E9B416C03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{931AB3A0-D133-44D9-B0CC-DC4867F68DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{931AB3A0-D133-44D9-B0CC-DC4867F68DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{931AB3A0-D133-44D9-B0CC-DC4867F68DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{931AB3A0-D133-44D9-B0CC-DC4867F68DC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8DB2D5C8-DD63-4DA9-B245-57EE163DA1F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8DB2D5C8-DD63-4DA9-B245-57EE163DA1F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8DB2D5C8-DD63-4DA9-B245-57EE163DA1F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8DB2D5C8-DD63-4DA9-B245-57EE163DA1F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A500173-F275-4535-9B12-920E9B416C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A500173-F275-4535-9B12-920E9B416C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A500173-F275-4535-9B12-920E9B416C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A500173-F275-4535-9B12-920E9B416C03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
