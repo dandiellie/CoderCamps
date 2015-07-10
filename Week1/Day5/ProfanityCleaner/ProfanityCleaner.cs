@@ -26,9 +26,9 @@ namespace ProfanityCleaner
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < words.Length; i++)
             {
-                if(library.ContainsKey(words[i]))
+                if (library.ContainsKey(words[i].ToLower()))
                 {
-                    words[i] = library[words[i]];
+                    words[i] = library[words[i].ToLower()];
                 }
                 sb.Append(words[i] + " ");
             }
