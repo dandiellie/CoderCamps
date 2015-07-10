@@ -30,14 +30,13 @@ namespace BetterTryParse
         public static int? TryParseAsInt(this string s)
         {
             int n = 0;
-            if (int.TryParse(s, out n))
-            {
-                return n;
-            }
-            else
-            {
-                return null;
-            }
+
+            //if (int.TryParse(s, out n))
+            //    return n;
+            //else
+            //    return null;
+
+            return int.TryParse(s, out n) ? n : default(int?);
         }
     }
 }

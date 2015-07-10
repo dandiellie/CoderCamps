@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLookupWithList", "We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductLookupWithDictionary", "Week1\Day5\ProductLookupWithDictionary\ProductLookupWithDictionary.csproj", "{F9ADBA26-8D76-4B35-9C3D-4FD3A33AFC22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfanityCleaner", "Week1\Day5\ProfanityCleaner\ProfanityCleaner.csproj", "{D492284B-00E6-4CC6-9456-5F5018ADA683}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F9ADBA26-8D76-4B35-9C3D-4FD3A33AFC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9ADBA26-8D76-4B35-9C3D-4FD3A33AFC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9ADBA26-8D76-4B35-9C3D-4FD3A33AFC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D492284B-00E6-4CC6-9456-5F5018ADA683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D492284B-00E6-4CC6-9456-5F5018ADA683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D492284B-00E6-4CC6-9456-5F5018ADA683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D492284B-00E6-4CC6-9456-5F5018ADA683}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
