@@ -9,13 +9,13 @@ namespace SecretCodeWithHashtable
 {
     class Enigma
     {
-        public Hashtable encrypter { get; private set; }
-        public Hashtable decrypter { get; private set; }
+        private Hashtable _encrypter;
+        private Hashtable _decrypter;
 
         public Enigma(Random r)
         {
-            Hashtable encrypter = new Hashtable();
-            Hashtable decrypter = new Hashtable();
+            _encrypter = new Hashtable();
+            _decrypter = new Hashtable();
             ArrayList randomlyOrderedList = new ArrayList();
 
             int randNum = 0;
@@ -39,8 +39,8 @@ namespace SecretCodeWithHashtable
             {
                 x = Convert.ToChar(i + 65);
                 y = Convert.ToChar(Convert.ToInt32(randomlyOrderedList[i]) + 65);
-                encrypter.Add(x,y);
-                decrypter.Add(y,x);
+                _encrypter.Add(x,y);
+                _decrypter.Add(y,x);
 
                 //Console.Write(x + "," + y + " ");                         //included for debugging                              
             }
@@ -52,9 +52,9 @@ namespace SecretCodeWithHashtable
             StringBuilder sb = new StringBuilder();
             foreach (char c in s)
             {
-                if (encrypter.ContainsKey(c))
+                if (_encrypter.ContainsKey(c))
                 {
-                    sb.Append(encrypter[c]);
+                    sb.Append(_encrypter[c]);
                 }
                 else
                 {
@@ -70,9 +70,9 @@ namespace SecretCodeWithHashtable
             StringBuilder sb = new StringBuilder();
             foreach (char c in s)
             {
-                if (decrypter.ContainsKey(c))
+                if (_decrypter.ContainsKey(c))
                 {
-                    sb.Append(decrypter[c]);
+                    sb.Append(_decrypter[c]);
                 }
                 else
                 {
