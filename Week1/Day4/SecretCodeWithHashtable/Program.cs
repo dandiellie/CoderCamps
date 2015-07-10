@@ -24,13 +24,13 @@ namespace SecretCodeWithHashtable
                 {
                     case 1:
                         Console.WriteLine("\nWhat message would you like to encrypt?\n");
-                        userMessage = Console.ReadLine();
+                        userMessage = Console.ReadLine().ToUpper();
                         Console.WriteLine(myCode.Encrypt(userMessage));
                         Console.WriteLine();
                         break;
                     case 2:
                         Console.WriteLine("\nWhat message would you like to decrypt?\n");
-                        userMessage = Console.ReadLine();
+                        userMessage = Console.ReadLine().ToUpper();
                         Console.WriteLine(myCode.Decrypt(userMessage));
                         Console.WriteLine();
                         break;
