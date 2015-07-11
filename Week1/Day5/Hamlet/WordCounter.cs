@@ -8,59 +8,46 @@ namespace Hamlet
 {
     class WordCounter
     {
-        public List<WordsUsed> GetUniqueWords(string s)
+        public IOrderedEnumerable<WordsUsed> GetUniqueWords(string s)
         {
-            List<WordsUsed> uniqueWords = new List<WordsUsed>();
+            char[] delimiter = { ' ', '!', '"', '#', '$', '%', '&', '(', ')', '.', '*', '+', ',', '/', '?', ':', ';', '@', '\\', '\n', '\r' };
+            string[] wordsWithNulls = s.Split(delimiter);
+            List<string> wordsWithoutNulls = new List<string>();
+            List<string> wordsToSkip = new List<string> {"", "a", "an", "and", "the", "to", "of", "you", "i", "my"};
             
-            char[] delimiter = { ' ', '!', '"', '#', '$', '%', '&', '(', ')', '.', '*', '+', ',', '/', '?', ':', ';', '@', '\\', '\n', '\r'};
-            string[] words = s.Split(delimiter);
-            string word = "";
-
-            for (int j = 0; j < words.Length; j++)
+            for (int j = 0; j < wordsWithNulls.Length; j++)
             {
-                word = words[j].ToLower();
-                if (word == "" || word == "a" || word == "an" || word == "the")
-                {
-                    continue;
-                }
-                else if (uniqueWords.Count != 0)
-                {
-                    for (int i = 0; i < uniqueWords.Count; i++)
-                    {
-                        if (word == uniqueWords[i].Word)
-                        {
-                            uniqueWords[i].TimesUsed++;
-                        }
-                        else
-                        {
-                            uniqueWords.Add(new WordsUsed { Word = word, TimesUsed = 1 });
-                        }
-                    }
-                }
-                else
-                {
-                    uniqueWords.Add(new WordsUsed { Word = word, TimesUsed = 1 });
-                }
+                if (wordsToSkip.Contains(wordsWithNulls[j].ToLower())) continue;
+                else wordsWithoutNulls.Add(wordsWithNulls[j].ToLower());
             }
+
+            var uniqueWords = wordsWithoutNulls.GroupBy(x => x)
+            .Select(x => new WordsUsed
+            {
+                TimesUsed = x.Count(),
+                Word = x.Key,
+            })
+            .OrderByDescending(x => x.TimesUsed);
 
             return uniqueWords;
         }
 
         public Tuple<List<string>, int> MostUsedWordIn(string s)
         {
-            List<WordsUsed> uniqueWordLibrary = GetUniqueWords(s);
-            int mostUsedTimes = 0;
+            IOrderedEnumerable<WordsUsed> uniqueWordLibrary = GetUniqueWords(s);
             List<string> mostUsedWords = new List<string>();
-            for (int i = 0; i < uniqueWordLibrary.Count; i++)
+            int mostUsedTime = 0;
+
+            foreach (WordsUsed word in uniqueWordLibrary)
             {
-                if (uniqueWordLibrary[i].TimesUsed >= mostUsedTimes)
+                if (word.TimesUsed >= mostUsedTime)
                 {
-                    mostUsedTimes = uniqueWordLibrary[i].TimesUsed;
-                    mostUsedWords.Add(uniqueWordLibrary[i].Word);
+                    mostUsedWords.Add(word.Word);
+                    mostUsedTime = word.TimesUsed;
                 }
             }
 
-            return new Tuple<List<string>, int>(mostUsedWords, mostUsedTimes);
+            return new Tuple<List<string>, int>(mostUsedWords, mostUsedTime);
         }
     }
 }
