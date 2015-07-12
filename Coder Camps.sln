@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamlet", "Week1\Day5\Hamlet\Hamlet.csproj", "{9EAA2995-B8BA-46B1-8160-2167AC4E842F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrgChart", "Week1\Day5\OrgChart\OrgChart.csproj", "{133AA0A4-F6E4-45B7-8AF4-6AF7DDA9075B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9EAA2995-B8BA-46B1-8160-2167AC4E842F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EAA2995-B8BA-46B1-8160-2167AC4E842F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EAA2995-B8BA-46B1-8160-2167AC4E842F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EAA2995-B8BA-46B1-8160-2167AC4E842F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{133AA0A4-F6E4-45B7-8AF4-6AF7DDA9075B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133AA0A4-F6E4-45B7-8AF4-6AF7DDA9075B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133AA0A4-F6E4-45B7-8AF4-6AF7DDA9075B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133AA0A4-F6E4-45B7-8AF4-6AF7DDA9075B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
