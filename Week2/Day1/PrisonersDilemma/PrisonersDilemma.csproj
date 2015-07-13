@@ -41,8 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cooperator.cs" />
+    <Compile Include="Defector.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomChooser.cs" />
+    <Compile Include="TitForTat.cs" />
+    <Compile Include="UnTitForTat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
