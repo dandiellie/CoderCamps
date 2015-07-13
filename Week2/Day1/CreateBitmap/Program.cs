@@ -20,7 +20,7 @@ namespace CreateBitmap
             using (Bitmap bitmap = new Bitmap(500, 500))
             {
                 // randomly set 1000 pixels
-                var rnd = new Random();
+                Random rnd = new Random();
                 for (var i = 0; i < 1000; i++)
                 {
                     bitmap.SetPixel(rnd.Next(500), rnd.Next(500), Color.Green);
