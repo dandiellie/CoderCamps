@@ -17,23 +17,13 @@ namespace MyConsoleApp
         public string Name { get; set; }
     }
 
-    class ProductComparer : IComparer<Product>
-    {
-
-        public int Compare(Product product1, Product product2)
-        {
-            return product1.Id - product2.Id;
-        }
-    }
-
-
     class Program
     {
         static List<Product> CreateProducts(int count)
         {
             var products = new List<Product>();
             var rnd = new Random();
-            for (var i = 0; i < 1000; i++)
+            for (var i = 0; i < count; i++)
             {
                 products.Add(new Product
                 {
@@ -44,48 +34,21 @@ namespace MyConsoleApp
             return products;
         }
 
-
-        static Product FindDuplicateProduct(List<Product> products)
-        {
-            foreach (var product1 in products)
-            {
-                foreach (var product2 in products)
-                {
-                    if (product1 != product2 && product1.Id == product2.Id)
-                    {
-                        return product1;
-                    }
-                }
-            }
-            return null;
-        }
-
-
-        static void SortProducts(List<Product> products)
-        {
-            products.Sort(new ProductComparer());
-        }
-
         static void Main(string[] args)
         {
             // Create 1 thousand products with Random Ids
-            var products = CreateProducts(1000);
+            List<Product> products = CreateProducts(1000);
 
-            // Remove all products with duplicate Ids
-            var dup = FindDuplicateProduct(products);
-            while (dup != null)
-            {
-                products.Remove(dup);
-                dup = FindDuplicateProduct(products);
-            }
-
-            // Sort products
-            SortProducts(products);
+            var q =    from x in products
+                       group x by x into sortedProducts
+                       let count = sortedProducts.Count()
+                       orderby count descending
+                       select new { Name = sortedProducts.Key.Name, Count = count };
 
             // Show unique list of products
-            foreach (var product in products)
+            foreach (var x in q)
             {
-                Console.WriteLine(product.Id + " is unique.");
+                Console.WriteLine(x.Name + " is unique.");
             }
 
             // Pause

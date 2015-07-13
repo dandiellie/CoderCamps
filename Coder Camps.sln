@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceWithProfiler", "Week2\Day1\PerformanceWithProfiler\PerformanceWithProfiler.csproj", "{81CA3E60-3D7D-4670-B1A3-7D5CCC937F59}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceWithStopwatch", "Week2\Day1\PerformanceWithStopwatch\PerformanceWithStopwatch.csproj", "{92BA0AAC-0DEB-4707-BAC8-885C3077F0A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateWithExceptions", "Week2\Day1\ValidateWithExceptions\ValidateWithExceptions.csproj", "{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{81CA3E60-3D7D-4670-B1A3-7D5CCC937F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81CA3E60-3D7D-4670-B1A3-7D5CCC937F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81CA3E60-3D7D-4670-B1A3-7D5CCC937F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81CA3E60-3D7D-4670-B1A3-7D5CCC937F59}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92BA0AAC-0DEB-4707-BAC8-885C3077F0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92BA0AAC-0DEB-4707-BAC8-885C3077F0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92BA0AAC-0DEB-4707-BAC8-885C3077F0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92BA0AAC-0DEB-4707-BAC8-885C3077F0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
