@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateWithExceptions", "Week2\Day1\ValidateWithExceptions\ValidateWithExceptions.csproj", "{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlakyCatch", "Week2\Day1\FlakyCatch\FlakyCatch.csproj", "{83E4F842-01AF-495C-949A-94DF05C8DCAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBitmap", "Week2\Day1\CreateBitmap\CreateBitmap.csproj", "{478B26EA-A2D3-498E-8A6A-F3F474ADE8CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6B7A2A1-C7A6-40D6-99AB-04A2BFE79B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E4F842-01AF-495C-949A-94DF05C8DCAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E4F842-01AF-495C-949A-94DF05C8DCAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E4F842-01AF-495C-949A-94DF05C8DCAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E4F842-01AF-495C-949A-94DF05C8DCAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478B26EA-A2D3-498E-8A6A-F3F474ADE8CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478B26EA-A2D3-498E-8A6A-F3F474ADE8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478B26EA-A2D3-498E-8A6A-F3F474ADE8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478B26EA-A2D3-498E-8A6A-F3F474ADE8CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
