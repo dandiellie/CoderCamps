@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace PrisonersDilemma
 {
-    class TitForTat: Player
+    public class TitForTat: IPlayer
     {
+        public int Years { get; set; }
+        public int Play { get; set; }
+
+        public TitForTat()
+        {
+            Years = 0;
+            Play = 0;
+        }
+        
         public void ChoosePlay(Random r, int p)
         {
             if (p == 0)

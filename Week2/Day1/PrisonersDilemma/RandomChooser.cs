@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace PrisonersDilemma
 {
-    class RandomChooser: Player
+    class RandomChooser: IPlayer
     {
-        public void ChoosePlay(Random r)
+        public int Years { get; set; }
+        public int Play { get; set; }
+
+        public RandomChooser()
+        {
+            Years = 0;
+            Play = 0;
+        }
+        
+        public void ChoosePlay(Random r, int p)
         {
             Play = r.Next(2) + 1;
         }

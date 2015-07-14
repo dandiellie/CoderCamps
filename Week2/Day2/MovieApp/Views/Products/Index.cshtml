@@ -1,0 +1,16 @@
+﻿@using MovieApp.Models
+@{
+    List<Product> products = new List<Product>
+    {
+        new Product {Name="Eggs", Price=2.33m},
+        new Product {Name="Milk", Price=1.99m},
+        new Product {Name="Cheese", Price=8.50m}
+    };
+}
+
+<ul>
+    @foreach (Product p in products)
+    {
+        <li>@p.Name</li>
+    }
+</ul>

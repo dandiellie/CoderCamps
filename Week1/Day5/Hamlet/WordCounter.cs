@@ -13,7 +13,7 @@ namespace Hamlet
             char[] delimiter = { ' ', '!', '"', '#', '$', '%', '&', '(', ')', '.', '*', '+', ',', '/', '?', ':', ';', '@', '\\', '\n', '\r' };
             string[] wordsWithNulls = s.Split(delimiter);
             List<string> wordsWithoutNulls = new List<string>();
-            List<string> wordsToSkip = new List<string> {"", "a", "an", "and", "the", "to", "of", "you", "i", "my"};
+            List<string> wordsToSkip = new List<string> {"", "a", "an", "and", "the", "to", "of", "you", "i", "my", "in", "it", "that", "is", "not"};
             
             for (int j = 0; j < wordsWithNulls.Length; j++)
             {
@@ -22,12 +22,12 @@ namespace Hamlet
             }
 
             var uniqueWords = wordsWithoutNulls.GroupBy(x => x)
-            .Select(x => new WordsUsed
-            {
-                TimesUsed = x.Count(),
-                Word = x.Key,
-            })
-            .OrderByDescending(x => x.TimesUsed);
+                .Select(x => new WordsUsed
+                {
+                    TimesUsed = x.Count(),
+                    Word = x.Key,
+                })
+                .OrderByDescending(x => x.TimesUsed);
 
             return uniqueWords;
         }

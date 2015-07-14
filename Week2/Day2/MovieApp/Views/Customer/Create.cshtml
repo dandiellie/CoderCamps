@@ -1,0 +1,72 @@
+﻿@using MovieApp.Models
+
+@{
+    if (IsPost)
+    {
+        Customer c = new Customer
+        {
+            FirstName = Request.Form["firstName"],
+            LastName = Request.Form["lastName"],
+            ShippingAddress = new Address
+            {
+                Street = Request.Form["shippingStree"],
+                City = Request.Form["shippingCity"]
+            },
+            BillingAddress = new Address
+            {
+                Street = Request.Form["billingStreet"],
+                City = Request.Form["billingCity"]
+            }
+        };
+
+        <text>
+            You entered: <br />
+            First Name: <p class="text-success">@c.FirstName</p><br />
+            Last Name: @c.LastName <br />
+            Shipping Address <br />
+            Street: @c.ShippingAddress.Street <br />
+            City: @c.ShippingAddress.City <br />
+            Billing Address <br />
+            Street: @c.BillingAddress.Street <br />
+            City: @c.BillingAddress.City <br />
+</text>
+    }
+}
+
+<form method="post" action="~/Customer/Create" class="form-horizontal">
+    <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+            <label for="firstName" class="col-lg-2 control-label">First Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName" class="col-lg-2 control-label">Last Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Shipping Address" class="col-lg-2 control-label">Shipping Address</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="shippingstreet" placeholder="Street">
+                <input type="text" class="form-control" id="shippingcity" placeholder="City/State/Zip">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Billing Address" class="col-lg-2 control-label">Billing Address</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="billingstreet" placeholder="Street">
+                <input type="text" class="form-control" id="billingcity" placeholder="City/State/Zip">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
