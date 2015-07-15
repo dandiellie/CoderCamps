@@ -1,0 +1,27 @@
+﻿@using ShoppingList2.Models
+@using ShoppingList2.Helpers
+@model IndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    Name: @Model.FirstName @Model.LastName
+</div>
+
+<ul>
+    @foreach(Product product in Model.ShoppingCart)
+    {
+        <li>
+            @product.Name - @MyHelpers.FormatPrice(-product.Price)<br />
+            @Html.Image("http://blog.promotion-us.com/blog.promotion-us.com/html/wp-content/uploads/converse-1970s-chuck-taylor-all-star-collection-1.jpg")
+        </li>
+    }
+</ul>
+
+<div>
+    @Html.ShowPrice(m => m.Total)
+</div>

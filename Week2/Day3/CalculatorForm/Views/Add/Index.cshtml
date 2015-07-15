@@ -1,0 +1,30 @@
+﻿@using CalculatorForm.Models
+@model AddViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Adding Machine</h2>
+
+@using(Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.Num1, "First Number: ")
+        @Html.TextBoxFor(m => m.Num1)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Num2, "Second Number: ")
+        @Html.TextBoxFor(m => m.Num2)
+    </div>
+    <div>
+        <input type="submit" value="Add" />
+    </div>
+}
+
+<div>
+    <br />
+    @if(Model != null)
+    {
+        @:Total: @Html.DisplayTextFor(m => m.Total)
+    }
+</div>

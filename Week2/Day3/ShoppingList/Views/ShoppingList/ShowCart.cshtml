@@ -1,0 +1,16 @@
+﻿@using ShoppingList.Models
+@model Customer
+
+<div>
+    @Model.FirstName @Model.LastName has the following items in his/her cart:
+    <ul>
+        @foreach(Product p in Model.Cart)
+        {
+            <li>
+                p.Name for p.Price
+            </li>
+        }
+    </ul>
+    Total: $
+</div>
+
