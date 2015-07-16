@@ -1,0 +1,11 @@
+﻿@using DisplayMovies.Models
+@model MovieIndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movies</h2>
+
+<div>
+    @TableHelpers.MovieListToTableFor(Model.MovieLibrary)
+</div>

@@ -1,0 +1,10 @@
+﻿@model long?
+
+@if(Model.HasValue)
+{
+    @String.Format("{0:(###)###-####}", Model.Value);
+}
+else
+{
+    <text>N/A</text>
+}

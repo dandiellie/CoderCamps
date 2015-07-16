@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ToyStoreLayout.cshtml";
+}
+
+<h2>Handmade Wooden Toys</h2>
+
+<div>
+    @Html.Action("GetQuote", "Quote")
+    @Html.Action("GetAd", "BannerAd")
+    
+    Hey, what's up??
+</div>
+
+@section FeaturedToys
+{
+    <div>
+        Featured Toys will go here.
+    </div>
+}

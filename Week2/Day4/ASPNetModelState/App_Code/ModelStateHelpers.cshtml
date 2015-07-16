@@ -1,0 +1,10 @@
+﻿@*@using System.Web.Mvc
+
+@helper ShowCustomErrorMessage(string propertyName)
+{
+    if (!ViewData.ModelState.IsValidField(propertyName))
+    {
+        <marquee>@ViewData.ModelState[propertyName].Errors.FirstOrDefault().ErrorMessage</marquee>
+        <div id="popup">@ViewData.ModelState[propertyName].Errors.FirstOrDefault().ErrorMessage</div>
+    }
+}*@
