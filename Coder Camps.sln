@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPNetModelState", "Week2\Day4\ASPNetModelState\ASPNetModelState.csproj", "{E0AABB99-1010-46E4-9EF7-8F655E66777B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstPractice", "Week3\Day1\CodeFirstPractice\CodeFirstPractice.csproj", "{ED634DC1-6720-4D56-AC7E-A43E619E974E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E0AABB99-1010-46E4-9EF7-8F655E66777B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0AABB99-1010-46E4-9EF7-8F655E66777B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0AABB99-1010-46E4-9EF7-8F655E66777B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0AABB99-1010-46E4-9EF7-8F655E66777B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED634DC1-6720-4D56-AC7E-A43E619E974E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED634DC1-6720-4D56-AC7E-A43E619E974E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED634DC1-6720-4D56-AC7E-A43E619E974E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED634DC1-6720-4D56-AC7E-A43E619E974E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
