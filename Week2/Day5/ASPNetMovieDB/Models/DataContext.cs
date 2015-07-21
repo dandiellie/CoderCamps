@@ -10,6 +10,7 @@ namespace ASPNetMovieDB.Models
     public class DataContext: DbContext
     {
         public IDbSet<Movie> Movies { get; set; }
+        public IDbSet<Genre> Genres { get; set; }
 
         static DataContext()
         {

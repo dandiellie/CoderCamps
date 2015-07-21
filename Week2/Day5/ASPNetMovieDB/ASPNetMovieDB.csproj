@@ -117,9 +117,20 @@
     <Compile Include="Migrations\201507172104321_InitialCreate.Designer.cs">
       <DependentUpon>201507172104321_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507211413296_MadeTitleDirectorNonNull.cs" />
+    <Compile Include="Migrations\201507211413296_MadeTitleDirectorNonNull.Designer.cs">
+      <DependentUpon>201507211413296_MadeTitleDirectorNonNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507211446442_AddGenres.cs" />
+    <Compile Include="Migrations\201507211446442_AddGenres.Designer.cs">
+      <DependentUpon>201507211446442_AddGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseInitializer.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\EFRepository.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\IRepository.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -128,11 +139,11 @@
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Movies\Create.cshtml" />
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Delete.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,6 +157,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201507172104321_InitialCreate.resx">
       <DependentUpon>201507172104321_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507211413296_MadeTitleDirectorNonNull.resx">
+      <DependentUpon>201507211413296_MadeTitleDirectorNonNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507211446442_AddGenres.resx">
+      <DependentUpon>201507211446442_AddGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

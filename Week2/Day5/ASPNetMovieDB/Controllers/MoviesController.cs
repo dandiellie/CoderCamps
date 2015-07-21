@@ -4,18 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace ASPNetMovieDB.Controllers
 {
     public class MoviesController : Controller
     {
-        private DataContext _db = new DataContext();
+        private IRepository _repo;
+
+        public MoviesController() : this (new EFRepository())
+        {
+
+        }
+
+        public MoviesController(IRepository repo)
+        {
+            _repo = repo;
+        }
         
         // GET: Movies
         public ActionResult Index()
         {
-            var movies = from m in _db.Movies select m;
-            return View(movies.ToList());
+            return View(_repo.ListMovies());
         }
 
         // GET: Movies/Details/5
@@ -36,8 +46,7 @@ namespace ASPNetMovieDB.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Movies.Add(movie);
-                _db.SaveChanges();
+                _repo.CreateMovie(movie);
                 return RedirectToAction("Index");
             }
             return View();
@@ -46,8 +55,7 @@ namespace ASPNetMovieDB.Controllers
         // GET: Movies/Edit/5
         public ActionResult Edit(int id)
         {
-            var movie = _db.Movies.Find(id);
-            return View(movie);
+            return View(_repo.FindMovie(id));
         }
 
         // POST: Movies/Edit/5
@@ -56,10 +64,7 @@ namespace ASPNetMovieDB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var original = _db.Movies.Find(movie.Id);
-                original.Title = movie.Title;
-                original.Director = movie.Director;
-                _db.SaveChanges();
+                _repo.UpdateMovie(movie);
                 return RedirectToAction("Index");
             }
             return View();
@@ -68,8 +73,7 @@ namespace ASPNetMovieDB.Controllers
         // GET: Movies/Delete/5
         public ActionResult Delete(int id)
         {
-            var movie = _db.Movies.Find(id);
-            return View(movie);
+           return View(_repo.FindMovie(id));
         }
 
         // POST: Movies/Delete/5
@@ -77,9 +81,7 @@ namespace ASPNetMovieDB.Controllers
         [ActionName("Delete")]
         public ActionResult DeleteReally(int id)
         {
-            var original = _db.Movies.Find(id);
-            _db.Movies.Remove(original);
-            _db.SaveChanges();
+            _repo.DeleteMovie(id);
             return RedirectToAction("Index");
         }
     }

@@ -16,11 +16,23 @@ namespace ASPNetMovieDB.Migrations
 
         protected override void Seed(ASPNetMovieDB.Models.DataContext context)
         {
+            var genres = new Genre[]
+            {
+                new Genre {Name="SciFi"},
+                new Genre {Name="Action"},
+                new Genre {Name="Mystery"},
+                new Genre {Name="Drama"},
+                new Genre {Name="Comedy"},
+            };
+
+            context.Genres.AddOrUpdate(g => g.Name, genres);
+            context.SaveChanges();
+            
             var movies = new Movie[]
             {
-                new Movie {Title="Star Wars"},
-                new Movie {Title="Memento"},
-                new Movie {Title="King Kong"}
+                new Movie {Title="Star Wars", Director="George Lucas", GenreId=genres[0].Id},
+                new Movie {Title="Memento", Director="Christopher Nolan", GenreId=genres[3].Id},
+                new Movie {Title="King Kong", Director="Peter Jackson", GenreId=genres[1].Id}
             };
 
             context.Movies.AddOrUpdate(p => p.Title, movies);
