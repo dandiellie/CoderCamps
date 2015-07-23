@@ -10,6 +10,6 @@ namespace ManyToManyExample.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public ICollection<Student> Students { get; set; }
+        public virtual ICollection<StudentCourse> Students { get; set; }
     }
 }

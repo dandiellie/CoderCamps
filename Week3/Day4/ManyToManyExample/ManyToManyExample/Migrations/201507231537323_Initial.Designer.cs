@@ -13,7 +13,7 @@ namespace ManyToManyExample.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201507231442294_Initial"; }
+            get { return "201507231537323_Initial"; }
         }
         
         string IMigrationMetadata.Source

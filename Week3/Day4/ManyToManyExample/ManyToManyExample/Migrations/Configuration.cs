@@ -43,19 +43,17 @@ namespace ManyToManyExample.Migrations
 
             var calc2 = context.Courses.FirstOrDefault(c => c.Code == "MATH217");
             var cSharp = context.Courses.FirstOrDefault(c => c.Code == "COSC100");
-            var physics = context.Courses.FirstOrDefault(c => c.Code == "COSC100");
+            var physics = context.Courses.FirstOrDefault(c => c.Code == "PHYS100");
 
-            claudius.Courses.Add(calc2);
-            claudius.Courses.Add(physics);
+            if (!claudius.Courses.Any(c => c.CourseId == calc2.Id)) { claudius.Courses.Add(new StudentCourse { CourseId = calc2.Id }); }
+            if (!claudius.Courses.Any(c => c.CourseId == physics.Id)) { claudius.Courses.Add(new StudentCourse { CourseId = physics.Id }); }
 
-            alton.Courses.Add(calc2);
-            alton.Courses.Add(cSharp);
-            alton.Courses.Add(physics);
+            if (!alton.Courses.Any(c => c.CourseId == calc2.Id)) { alton.Courses.Add(new StudentCourse { CourseId = calc2.Id }); }
+            if (!alton.Courses.Any(c => c.CourseId == cSharp.Id)) { alton.Courses.Add(new StudentCourse { CourseId = cSharp.Id }); }
+            if (!alton.Courses.Any(c => c.CourseId == physics.Id)) { alton.Courses.Add(new StudentCourse { CourseId = physics.Id }); }
 
-            seth.Courses.Add(cSharp);
-            seth.Courses.Add(physics);
-
-            context.SaveChanges();
+            if (!seth.Courses.Any(c => c.CourseId == cSharp.Id)) { seth.Courses.Add(new StudentCourse { CourseId = cSharp.Id }); }
+            if (!seth.Courses.Any(c => c.CourseId == physics.Id)) { seth.Courses.Add(new StudentCourse { CourseId = physics.Id }); }
         }
     }
 }
