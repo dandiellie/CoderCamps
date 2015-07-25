@@ -50,9 +50,9 @@ namespace ASPNetIdentityDemo
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(                                                   //uses OAuth
+               consumerKey: "7RT0Djwvy8V23KupKUXViok0p",
+               consumerSecret: "Td7rF3BgXg5JQR7Yd3ntyPXt4c271D7GhxizPlxc8EusRoqxFP");
 
             //app.UseFacebookAuthentication(
             //   appId: "",

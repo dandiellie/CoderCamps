@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Presentation.Web", "FourLayerIdentity\FourLayerIdentity.Presentation.Web.csproj", "{3D604690-694F-4AE9-961D-A87D85E3BA69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4D34D8EB-A058-4F02-9808-BBCB0303111F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B339974B-F844-4D8F-A2E6-D13E2FFACA38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C86C5BD9-95BF-44F7-8B26-6FDE4AC12FB2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{18D49A2A-80B1-4B17-A457-3CE6C2B53715}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Infrastructure.Persistence", "FourLayerIdentity.Infrastructure.Persistence\FourLayerIdentity.Infrastructure.Persistence.csproj", "{E2B98470-E64E-4E8E-94D3-37041B525296}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Domain", "FourLayerIdentity.Domain\FourLayerIdentity.Domain.csproj", "{AB98AE7A-74BC-4401-A97F-04733FF0319B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Domain.Tests", "FourLayerIdentity.Domain.Tests\FourLayerIdentity.Domain.Tests.csproj", "{AE0110CD-539B-4A0B-80E0-6C21F681713D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Services.Tests", "FourLayerIdentity.Services.Tests\FourLayerIdentity.Services.Tests.csproj", "{8005D8C9-1094-4D1B-9A77-08DD54DB6630}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Services", "FourLayerIdentity.Services\FourLayerIdentity.Services.csproj", "{F2794E61-FD76-4A1B-A9DA-6A990BFEAC8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourLayerIdentity.Presentation.Web.Tests", "FourLayerIdentity.Presentation.Web.Tests\FourLayerIdentity.Presentation.Web.Tests.csproj", "{E7DE6E6B-2843-4792-9867-8943ECCE4777}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D604690-694F-4AE9-961D-A87D85E3BA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D604690-694F-4AE9-961D-A87D85E3BA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D604690-694F-4AE9-961D-A87D85E3BA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D604690-694F-4AE9-961D-A87D85E3BA69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B98470-E64E-4E8E-94D3-37041B525296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B98470-E64E-4E8E-94D3-37041B525296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B98470-E64E-4E8E-94D3-37041B525296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B98470-E64E-4E8E-94D3-37041B525296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB98AE7A-74BC-4401-A97F-04733FF0319B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB98AE7A-74BC-4401-A97F-04733FF0319B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB98AE7A-74BC-4401-A97F-04733FF0319B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB98AE7A-74BC-4401-A97F-04733FF0319B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE0110CD-539B-4A0B-80E0-6C21F681713D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE0110CD-539B-4A0B-80E0-6C21F681713D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE0110CD-539B-4A0B-80E0-6C21F681713D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE0110CD-539B-4A0B-80E0-6C21F681713D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8005D8C9-1094-4D1B-9A77-08DD54DB6630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8005D8C9-1094-4D1B-9A77-08DD54DB6630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8005D8C9-1094-4D1B-9A77-08DD54DB6630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8005D8C9-1094-4D1B-9A77-08DD54DB6630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2794E61-FD76-4A1B-A9DA-6A990BFEAC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2794E61-FD76-4A1B-A9DA-6A990BFEAC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2794E61-FD76-4A1B-A9DA-6A990BFEAC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2794E61-FD76-4A1B-A9DA-6A990BFEAC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7DE6E6B-2843-4792-9867-8943ECCE4777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7DE6E6B-2843-4792-9867-8943ECCE4777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7DE6E6B-2843-4792-9867-8943ECCE4777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7DE6E6B-2843-4792-9867-8943ECCE4777}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D604690-694F-4AE9-961D-A87D85E3BA69} = {C86C5BD9-95BF-44F7-8B26-6FDE4AC12FB2}
+		{E2B98470-E64E-4E8E-94D3-37041B525296} = {B339974B-F844-4D8F-A2E6-D13E2FFACA38}
+		{AB98AE7A-74BC-4401-A97F-04733FF0319B} = {4D34D8EB-A058-4F02-9808-BBCB0303111F}
+		{AE0110CD-539B-4A0B-80E0-6C21F681713D} = {4D34D8EB-A058-4F02-9808-BBCB0303111F}
+		{8005D8C9-1094-4D1B-9A77-08DD54DB6630} = {18D49A2A-80B1-4B17-A457-3CE6C2B53715}
+		{F2794E61-FD76-4A1B-A9DA-6A990BFEAC8B} = {18D49A2A-80B1-4B17-A457-3CE6C2B53715}
+		{E7DE6E6B-2843-4792-9867-8943ECCE4777} = {C86C5BD9-95BF-44F7-8B26-6FDE4AC12FB2}
+	EndGlobalSection
+EndGlobal

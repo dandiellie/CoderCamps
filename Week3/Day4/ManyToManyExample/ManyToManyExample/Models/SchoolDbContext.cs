@@ -10,5 +10,6 @@ namespace ManyToManyExample.Models
     {
         public IDbSet<Student> Students { get; set; }
         public IDbSet<Course> Courses { get; set; }
+        public IDbSet<StudentCourse> StudentCourses { get; set; }
     }
 }

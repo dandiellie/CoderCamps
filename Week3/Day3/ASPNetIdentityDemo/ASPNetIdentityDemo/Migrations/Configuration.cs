@@ -7,15 +7,16 @@ namespace ASPNetIdentityDemo.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using System.Security.Claims;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ASPNetIdentityDemo.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(ASPNetIdentityDemo.Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             UserStore<ApplicationUser> userStore = new UserStore<ApplicationUser>(context);
             UserManager<ApplicationUser> userManager = new UserManager<ApplicationUser>(userStore);
@@ -43,6 +44,8 @@ namespace ASPNetIdentityDemo.Migrations
 
                 userManager.AddToRole(dani.Id, "Admin");
             }
+
+            userManager.AddClaim(dani.Id, new Claim("CanEditProducts", "true"));
         }
     }
 }

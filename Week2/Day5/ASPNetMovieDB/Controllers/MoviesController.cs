@@ -19,7 +19,7 @@ namespace ASPNetMovieDB.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            var movies = _repo.Query<Movie>().Include(m => m.Genre).ToList();
+            var movies = _repo.Query<Movie>().Include(m => m.Genre).OrderBy(m => m.Title).ToList();
             return View(movies);
         }
 
