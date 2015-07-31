@@ -1,19 +1,14 @@
-﻿using Newtonsoft.Json.Serialization;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace MVCwithJSON
+namespace MovieApp
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
-            config.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
-
-            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

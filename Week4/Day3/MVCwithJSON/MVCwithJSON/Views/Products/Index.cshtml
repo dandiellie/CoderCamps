@@ -5,15 +5,70 @@
 
 <h2>Products</h2>
 
+<form id="frm">
+    <div>
+        <label>
+            Product Name: <input id="name"/>
+        </label>
+    </div>
+    <div>
+        <label>
+            Product Price: <input id="price"/>
+        </label>
+    </div>
+    <input type="submit" value="Add Product"/>
+</form>
+
 <ul id="productList"></ul>
 
 @section scripts {
     <script>
-        $.getJSON("/products/getProducts").done(function (data) {
-            data.forEach(function (product) {
-                var productList = document.getElementById('productList');
-                productList.innerHTML += '<li>' + product.Name + '</li>';
-            });
+        var frm = document.getElementById('frm');
+        var productName = document.getElementById('name');
+        var productPrice = document.getElementById('price');
+
+        //handle form submit
+        frm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            //create payload
+            var product = {
+                name: productName.value,
+                price: productPrice.value
+            };
+
+            //perform Ajax call
+            $.ajax('/api/products/', {
+                type: 'POST',
+                data: JSON.stringify(product),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).done(function () {
+                e.target.reset();
+                fetchProducts();
+            }).fail(function () {
+                var errorMessage = '';
+                var result = JSON.parse(xhr.responseText);
+                console.log(result.modelState);
+                for(var prop in result.modelState)
+                {
+                    errorMessage += result.modelState[prop] + '\r';
+                }
+                alert(errorMessage);
+            })
         });
+
+        function fetchProducts() {
+            $.getJSON("/api/products/").done(function (data) {
+                var productList = document.getElementById('productList');
+                productList.innerHTML = '';
+                data.forEach(function (product) {
+                    productList.innerHTML += '<li>' + product.Name + '</li>';
+                });
+            });
+        }
+        
+        //fetch products when view first loads
+        fetchProducts();
     </script>
 }
