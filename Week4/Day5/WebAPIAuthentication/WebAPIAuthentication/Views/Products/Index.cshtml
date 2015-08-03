@@ -1,0 +1,31 @@
+﻿@using WebAPIAuthentication.Models
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul id="productList">
+    @foreach(var product in Model)
+    {
+        <li style="cursor: pointer;" id="@product.Id">@product.Name</li>
+    }
+</ul>
+
+@section scripts {
+    <script>
+        $('#productList').sortable({
+            update: function (e, ul) {
+                var order = $(this).sortable('toArray');
+                $.ajax({
+                    data: JSON.stringify(order),
+                    type: 'POST',
+                    url: '/products/saveOrder',
+                    contentType: 'application/json',
+                    dataType: 'json'
+                });
+            }
+        }).disableSelection();
+    </script>
+}

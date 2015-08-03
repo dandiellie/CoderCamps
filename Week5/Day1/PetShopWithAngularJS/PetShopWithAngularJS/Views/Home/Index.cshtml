@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Ye Olde Pet Shoppe";
+}
+
+
+<div class="container-fluid">
+    <div class="row"><h1>Ye Olde Pet Shoppe</h1></div>
+
+    <div class="row" ng-controller="PetShopController as petsList">
+        <div ng-repeat="pet in petsList.pets">
+            <h2>{{pet.category}}</h2>
+            <hr />
+            <div id="container" ng-repeat="animal in pet.animals">
+                <div class="col-md-4" align="center">
+                    <h3>{{animal.name}}</h3>
+                    <img ng-src="{{animal.img}}" height="200" />
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

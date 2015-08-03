@@ -1,0 +1,62 @@
+﻿<form id="frm">
+    Username: <input type="text" id="username" /><br/>
+    Password: <input type="password" id="password" /><br/>
+    <input type="button" id="submit" value="Login" />
+</form>
+
+<ul id="productList">
+
+</ul>
+
+<form>
+    Product: <input type="text" id="product" />
+</form>
+
+@section scripts {
+    <script>
+        $('#product').autocomplete({
+            source: '/products/find',
+            minLength: 1
+        });
+
+        $('#submit').click(function () {
+            login();
+        });
+
+        function login() {
+            var userName = $('#username').val();
+            var password = $('#password').val();
+
+            $.ajax('/Token', {
+                type: 'POST',
+                data: {
+                    grant_type: 'password',
+                    userName: 'danielle.frederick@outlook.com',
+                    password: '123456'
+                }
+            }).done(function (data) {
+                sessionStorage.setItem('token', data.access_token);
+                getProducts();
+            }).fail(function (xhr) {
+                alert(JSON.parse(xhr.responseText).error_description);
+            });
+        }
+
+        function getProducts() {
+            $.ajax('/api/products/', {
+                type: 'GET',
+                headers: {
+                    Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                }
+            }).done(function (data) {
+                var productList = $('#productList');
+                productList.html('');
+                data.forEach(function (product) {
+                    productList.append('<li>' + product.name + '</li>');
+                });
+            }).fail(function (data) {
+                //debugger;
+            });
+        }
+    </script>
+}
