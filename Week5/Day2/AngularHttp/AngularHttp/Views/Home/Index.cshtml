@@ -1,0 +1,7 @@
+﻿<div ng-controller="FoodController as vm">
+    <input ng-model="vm.search" ng-model-options="{debounce:500}" ng-change="vm.fetch()"/>
+
+    <ul>
+        <li ng-repeat="item in vm.items">{{item.name}}</li>
+    </ul>
+</div>

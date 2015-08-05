@@ -1,0 +1,13 @@
+#popup {
+	min-width: 500px;
+	width: 500px;
+	min-height: 300;
+	margin: 12px;
+}
+
+#status {
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 450px;
+}

@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Cool Apps";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-controller="FavoriteColorController as vm">
+                <h2>What is your favorite color?</h2>
+                <button class="btn btn-danger" ng-click="vm.pickColor('Red')">Red</button>
+                <button class="btn btn-warning" ng-click="vm.pickColor('Yellow')">Yellow</button>
+                <button class="btn btn-success" ng-click="vm.pickColor('Green')">Green</button>
+                <button class="btn btn-info" ng-click="vm.pickColor('Blue')">Blue</button>
+
+                <h2>Your favorite color is:</h2>
+                <output class={{vm.btnClass}}>{{vm.color}}</output>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Calulator</h2><br />
+            <div ng-controller="CalculatorController as vm">
+                <div class="form-group">
+                    <label class="control-label">
+                        1st Argument: <input class="form-control" type="number" ng-model="vm.num1" />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">
+                        2nd Argument: <input class="form-control" type="number" ng-model="vm.num2" />
+                    </label>
+                </div>
+                <br /><br />
+                <div>
+                    <button class="btn btn-default" ng-click="vm.calculate('+')">+</button>
+                    <button class="btn btn-default" ng-click="vm.calculate('-')">-</button>
+                    <button class="btn btn-default" ng-click="vm.calculate('*')">*</button>
+                    <button class="btn btn-default" ng-click="vm.calculate('/')">/</button>
+                    <button class="btn btn-default" ng-click="vm.calculate('%')">%</button>
+                    <button class="btn btn-default" ng-click="vm.calculate('^')">^</button>
+                </div>
+                <br />
+                <div>
+                    <output>{{vm.num1}} {{vm.operation}} {{vm.num2}} = {{vm.result}}</output>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

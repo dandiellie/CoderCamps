@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Unique Sorter";
+}
+<h2>@ViewBag.Title</h2>
+<h4>Enter a string, and i will give you a list of unique words you entered.</h4>
+
+<div ng-controller="StringController as vm">
+    @*<div class="form-group">
+        <label for="textArea" class="col-lg-2 control-label">Enter Message Here:</label>
+        <div class="col-lg-10">
+            <textarea class="form-control" rows="3" id="textArea" ng-model="vm.entry"></textarea>
+            <span class="help-block">{{vm.entry}}</span>
+        </div>
+    </div>*@
+    <hr />
+    <div>
+        <h3>You entered the following words:</h3>
+        <ul>
+            <li ng-repeat="word in vm.entryArray|unique">
+                {{word}} Some Text
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="GiftHubChromeExtension" ng-csp>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/app/popup.js"></script>
+    <title>GiftHub Chrome Extension</title>
+  </head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand">GiftHub</a>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/>
+    <div id='product-info' class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-2">
+          <div id='title'><h3>Title Here</h3></div>
+          <div id="status"></div>
+          <img id="image-result" hidden>
+          <div class="form-group">
+            <label class="control-label">
+              Title: <input class="form-control" type="text" ng-model="vm.title" />
+            </label>
+            <label class="control-label">
+              Link Url: <input class="form-control" type="text" ng-model="vm.url" placeholder="http://www.target.com/p/threshold-pierced-patterned-hurricane-candle-holder-white-9/-/A-15317956#prodSlot=_1_4"/>
+            </label>
+            <br/>
+            <label class="control-label">
+              Color: <input class="form-control" type="text" ng-model="vm.color" />
+            </label>
+            <label class="control-label">
+              Size: <input class="form-control" type="text" ng-model="vm.size" />
+            </label>
+            <br/>
+            <label class="control-label">
+              Other Details and Description: <textarea class="form-control" rows="3" cols="45" id="textArea"></textarea>
+            </label>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+              <button type="reset" class="btn btn-default">Cancel</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+          <text>{{vm.title}}</text>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

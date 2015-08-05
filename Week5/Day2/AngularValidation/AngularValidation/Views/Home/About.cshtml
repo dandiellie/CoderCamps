@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Employee Intake Form";
+}
+
+<style>
+    .ng-invalid.ng-touched {
+        background-color: #DD4814;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+<h2>@ViewBag.Title</h2><hr />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-controller="EmployeeController as vm">
+                <form name="employee-intake-form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="control-label">First Name:</label>
+                            <input name="first-name" class="form-control" ng-model="vm.firstName" type="text" placeholder="First Name" ng-required="true">
+                            <hr />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Last Name:</label>
+                            <input name="last-name" class="form-control" ng-model="vm.lastName" type="text" placeholder="Last Name" ng-required="true">
+                            <hr />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Age:</label>
+                            <input name="age" class="form-control" ng-model="vm.age" type="text" placeholder="Age" ng-required="true">
+                            <hr />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">FullTime/PartTime:</label>
+                            <select  name="type" class="form-control" ng-model="vm.selectedType" ng-options="type for type in vm.types" ng-required="true">
+                            </select>
+                            <hr />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Yearly Salary:</label>
+                            <input name="yearly-salary" class="form-control" ng-model="vm.yearlySalary" type="text" placeholder="Yearly Salary" ng-required="vm.isFullTime()">
+                            <hr />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Monthly Salary:</label>
+                            <input name="monthly-salary" class="form-control" ng-model="vm.monthlySalary" type="text" placeholder="Monthly Salary" ng-required="!vm.isFullTime()">
+                            <hr />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div>
+                            <input class="btn btn-info" type="submit" ng-disabled="employee-intake-form.$invalid" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <span ng-show="employee-intake-form.first-name.$touched && employee-intake-form.first-name.$error.required" class="error">
+                Your first name is required.
+            </span>
+            <span ng-show="employee-intake-form.last-name.$touched && employee-intake-form.last-name.$error.required" class="error">
+                Your last name is required.
+            </span>
+            <span ng-show="employee-intake-form.age.$touched && employee-intake-form.age.$error.required" class="error">
+                <br />
+                Your age is required.
+            </span>
+            <span ng-show="employee-intake-form.age.$touched && employee-intake-form.age.$error.number" class="error">
+                <br />
+                Your age must be a number.
+            </span>
+            <span ng-show="employee-intake-form.type.$touched && employee-intake-form.age.$error.required" class="error">
+                Your type is required.
+            </span>
+            <span ng-show="employee-intake-form.yearly-salary.$touched && employee-intake-form.yearly-salary.$error.required">
+                Yearly salary is required.
+            </span>
+            <span ng-show="employee-intake-form.yearly-salary.$touched && employee-intake-form.yearly-salary.$error.number">
+                Yearly salary must be a number.
+            </span>
+            <span ng-show="employee-intake-form.monthly-salary.$touched && employee-intake-form.monthly-salary.$error.required">
+                Monthly salary is required.
+            </span>
+            <span ng-show="employee-intake-form.monthly-salary.$touched && employee-intake-form.monthly-salary.$error.number">
+                Monthly salary must be a number.
+            </span>
+        </div>
+    </div>
+</div>
