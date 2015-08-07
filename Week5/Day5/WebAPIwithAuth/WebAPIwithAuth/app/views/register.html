@@ -1,0 +1,8 @@
+﻿<form ng-submit="vm.register()">
+    <fieldset ng-disabled="vm.isLoading">
+        Email: <input ng-model="vm.email" type="email" /><br />
+        Password: <input ng-model="vm.password" type="password" /><br />
+        Confirm Password: <input ng-model="vm.confirmPassword" type="password" /><br />
+        <input type="submit" value="Register"/>
+    </fieldset>
+</form>

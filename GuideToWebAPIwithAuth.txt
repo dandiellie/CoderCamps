@@ -1,0 +1,44 @@
+Web API w/Authentication
+- 3 Layers
+	- Presentation (Web Layer)
+	- Infrastructure (Data Layer)
+	- Domain (Models Layer)
+- Add References
+	- Data Layer references the Models Layer
+	- Web Layer references the Data and Models Layers
+	- All Layers reference Microsoft.AspNet.Identity.EntityFramework
+- Move ApplicationUser to Models Layer
+- Move ApplicationDbContext to Data Layer
+- Create Models and Establish relations between Tables
+- Add IDbSet<> to ApplicationDbContext
+- Create Database
+	- Enable-Migrations (change default project to Data Layer)
+	- Seed Database
+	- Add-Migration Initial
+	- Update-Database
+- Back End
+	- Create Repositories in Data Layer
+	- Create API Controllers in Web Layer
+- Front End
+	- Add app folder, "app.js", "services.js", and "controllers.js"
+	- Manage NuGet Packages: add "AngularJS.Route"
+	- Update "BundleConfig.cs"
+	- Update "_Layout.cshtml"
+		- Render Scripts
+		- Update "<html ng-app="MyApp">" DO NOT FORGET THIS!
+	- Place "<ng-view></ng-view>" in Index.cshtml
+	- Define Routes and Constants in "app.js"
+	- Make views folder and html pages
+	- Make Angular controllers for html pages
+	- Add links to navbar in "_Layout.cshtml"
+	- STOP! Run it and make sure everything works so far
+	- Write "services.js", html pages, and "controllers.js"
+- Cry because Nothing Works
+
+
+
+EXTRA NOTES
+- ApplicationUser Id is a string
+- The name of the Database is in "Web.config" in the Web Layer
+- "using Microsoft.AspNet.Identity;" to access "User.Identity.GetUserId();"
+- Don't forget the space in $http "headers: {'Authorization': 'Bearer ' + $window.sessionStorage.getItem('token')}"

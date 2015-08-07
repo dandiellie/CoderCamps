@@ -1,0 +1,10 @@
+﻿<h2>Login</h2>
+<div>
+    <form ng-submit="vm.login()">
+        <fieldset ng-disabled="vm.isLoading">
+            username: <input ng-model="vm.username" /><br />
+            password: <input ng-model="vm.password" type="password" /><br />
+            <input type="submit" value="Login" />
+        </fieldset>
+    </form>
+</div>

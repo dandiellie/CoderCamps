@@ -1,0 +1,17 @@
+﻿<div class="container">
+    <div class="row">
+        <div style="border: 1px solid black; margin-top: 10px" class="col-md-4 text-center" ng-repeat="car in vm.cars">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Make: </h5><h3>{{car.make}}</h3>
+                    <h5>Model: </h5><h3>{{car.model}}</h3>
+                </div>
+                <div class="col-md-6">
+                    <h6>Price: </h6><h4>{{car.price | currency}}</h4>
+                    <h6>Color: </h6><h4>{{car.color}}</h4>
+                    <h6>Is it Badass? </h6><h4>{{car.isBadass}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
