@@ -1,0 +1,31 @@
+﻿<div ng-controller="ProductsController as vm">
+    <h2>Products List</h2>
+    <div ng-hide="vm.isLoaded">
+        <p>Loading please wait...</p>
+    </div>
+    <div ng-show="vm.isLoaded">
+        <ul>
+            <li ng-repeat="product in vm.products">{{product.name}}</li>
+        </ul>
+    </div>
+    
+</div>
+<hr />
+<div ng-controller="CreateProductController as vm">
+    <h2>Create Product</h2>
+    <form ng-submit="vm.add()">
+        <div>
+            <label>
+                Name: <input ng-model="vm.name" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Price: <input ng-model="vm.price" />
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Add" />
+        </div>
+    </form>
+</div>

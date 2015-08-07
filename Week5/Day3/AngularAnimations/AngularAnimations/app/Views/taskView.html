@@ -1,0 +1,12 @@
+﻿<h2>To Do List</h2>
+
+<div>
+    <ul>
+        <li ng-repeat="task in vm.tasks" class="task">{{task.name}}</li>
+    </ul>
+
+    <form ng-submit="vm.addTask()">
+        <input ng-model="vm.newTask" />
+        <input type="submit" value="Add" />
+    </form>
+</div>

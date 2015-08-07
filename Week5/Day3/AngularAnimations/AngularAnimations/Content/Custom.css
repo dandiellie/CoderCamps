@@ -1,0 +1,30 @@
+﻿.task {
+    height: 30px;
+    width: 300px;
+    border: 1px solid black;
+    background-color: #eee;
+    padding: 5px;
+    margin: 5px;
+    text-align: inherit;
+}
+
+/*Animate Before*/
+.task.ng-enter {
+    transition: height 0.5s;
+    height: 0px;
+    overflow: hidden;
+}
+
+/*Animate After*/
+.task.ng-enter-active {
+    height: 20px;
+}
+
+.view.ng-enter {
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.view.ng-enter-active {
+    opacity: 1;
+}

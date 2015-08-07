@@ -1,0 +1,38 @@
+﻿<div ng-controller="GetMoviesController as vm">
+    <h2>Movie List</h2>
+    <div ng-hide="vm.isLoaded">
+        <p>Loading please wait...</p>
+    </div>
+    <div ng-show="vm.isLoaded">
+        <ul>
+            <li ng-repeat="movie in vm.movies">
+                <b>Title:</b> {{movie.title}} <b>Year:</b> {{movie.year}} <b>Director:</b> {{movie.director}}
+            </li>
+        </ul>
+    </div>
+
+</div>
+<hr />
+<div ng-controller="CreateMovieController as vm">
+    <h2>Create Movie</h2>
+    <form ng-submit="vm.add()">
+        <div>
+            <label>
+                Title: <input ng-model="vm.title" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Year: <input ng-model="vm.year" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Director: <input ng-model="vm.director" />
+            </label>
+        </div>
+        <div>
+            <input type="submit" value="Add" />
+        </div>
+    </form>
+</div>
